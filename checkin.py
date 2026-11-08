@@ -511,7 +511,7 @@ class GLaDOS:
 
 def get_exchange_plan():
     """读取自动兑换配置，返回计划 ID；关闭或无效时返回 None"""
-    raw = os.environ.get("EXCHANGE_PLAN", "plan500").strip().lower()
+    raw = os.environ.get("EXCHANGE_PLAN", "off").strip().lower()
     if raw in EXCHANGE_DISABLED_VALUES:
         return None
     if raw in EXCHANGE_PLANS:
